@@ -2,8 +2,11 @@ import PerfilStory from '@/components/components_gui/PerfilStory';
 import { BlurView } from 'expo-blur';
 import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useRouter } from 'expo-router';
 
 export default function CardStory() {
+  const router = useRouter();
+
   const stories = [
     {
       id: '1',
@@ -31,6 +34,10 @@ export default function CardStory() {
     },
   ];
 
+  const handleOpenStory = () => {
+    router.push('/screens-gui/StoryViewer');
+  };
+
   return (
     <View style={styles.container}>
       <ScrollView
@@ -41,7 +48,12 @@ export default function CardStory() {
         <PerfilStory />
 
         {stories.map((story) => (
-          <TouchableOpacity key={story.id} style={styles.card} activeOpacity={0.9}>
+          <TouchableOpacity 
+            key={story.id} 
+            style={styles.card} 
+            activeOpacity={0.9}
+            onPress={handleOpenStory}
+          >
 
             <View style={styles.imageWrapper}>
               <Image
@@ -134,7 +146,7 @@ const styles = StyleSheet.create({
     borderWidth: 2.5,
     borderColor: 'rgba(255,255,255,0.85)',
     overflow: 'hidden',
-    zIndex: 4, // 👈 FUNDAMENTAL — mantém nítido e acima do blur
+    zIndex: 4, 
   },
 
   avatar: {
@@ -150,6 +162,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 14,
     fontWeight: '600',
-    zIndex: 4, // acima do blur também
+    zIndex: 4,
   },
 });

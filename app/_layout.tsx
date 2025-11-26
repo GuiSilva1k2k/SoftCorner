@@ -12,6 +12,7 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="screens-gui/MoodScreen" options={{ headerShown: false }} />
+        <Stack.Screen name="screens-gui/StoryViewer" options={{ headerShown: false }} />        
         <Stack.Screen name="(tabs)-GUI" options={{ headerShown: false }} />
         <Stack.Screen name="screens-gui/Cicles/Cicles" options={{ headerShown: false }} />
         <Stack.Screen name="screens-gui/Cicles/CreateCicle" options={{ headerShown: false }} />
