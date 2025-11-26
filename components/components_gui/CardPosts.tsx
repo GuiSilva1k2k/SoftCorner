@@ -25,8 +25,34 @@ const posts = [
   {
     id: "1",
     user: {
-      name: "Yuri Levi",
-      avatar: require("@/assets/assets_gui/yuri.png"),
+      name: "Charles Leclerc",
+      avatar: require("@/assets/assets_gui/icons/charle.jpg"),
+    },
+    time: "2 horas atrás",
+    text: "Teste de post",
+    image: require("@/assets/assets_gui/yuri.png"),
+    likes: 1500,
+    comments: 75,
+    views: 33250,
+  },
+  {
+    id: "2",
+    user: {
+      name: "Gabriel Bortoleto",
+      avatar: require("@/assets/assets_gui/icons/gabriel.jpg"),
+    },
+    time: "2 horas atrás",
+    text: "Teste de post",
+    image: require("@/assets/assets_gui/yuri.png"),
+    likes: 1500,
+    comments: 75,
+    views: 33250,
+  },
+  {
+    id: "3",
+    user: {
+      name: "Max Verstappen",
+      avatar: require("@/assets/assets_gui/icons/max.jpg"),
     },
     time: "2 horas atrás",
     text: "Teste de post",

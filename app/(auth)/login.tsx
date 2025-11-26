@@ -88,7 +88,7 @@ export default function LoginScreen() {
     }
   }, [modalStep]);
 
-  const handleLogin = () => router.replace('/(tabs)-GUI/Home');
+  const handleLogin = () => router.replace('/screens-gui/MoodScreen');
 
   const renderModalHeader = (title: string, onBack?: () => void) => (
     <View style={styles.modalHeaderRow}>
