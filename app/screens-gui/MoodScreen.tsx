@@ -11,7 +11,7 @@ export default function MoodScreen() {
   return (
     <View style={styles.container}>
       {/* Oculta header e tab bar */}
-      <Stack.Screen options={{ headerShown: false, tabBarStyle: { display: 'none' } }} />
+      <Stack.Screen options={{ headerShown: false }} />
 
       <RadialBackground />
 
