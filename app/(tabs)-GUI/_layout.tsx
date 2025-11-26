@@ -54,8 +54,8 @@ export default function TabLayout() {
           elevation: 0,
           shadowOpacity: 0,
           alignItems: 'center',
-          justifyContent: 'center',
-          paddingTop: 0,
+          justifyContent: 'space-between',
+          paddingTop: 10,
         },
         tabBarBackground: () => (
           <View style={styles.tabBarBackgroundContainer}>
@@ -98,11 +98,6 @@ export default function TabLayout() {
             <TabBarIcon focused={focused} color={color} name={focused ? 'people' : 'people-outline'} label="Comunidade" />
           ),
         }}
-        listeners={({ navigation }) => ({
-            tabPress: (e) => {
-              e.preventDefault(); 
-            },
-        })}
       />
       
       <Tabs.Screen
@@ -113,11 +108,6 @@ export default function TabLayout() {
             <TabBarIcon focused={focused} color={color} name={focused ? 'add-circle' : 'add-circle-outline'} label="Criar" />
           ),
         }}
-        listeners={({ navigation }) => ({
-            tabPress: (e) => {
-              e.preventDefault();
-            },
-        })}
       />
       
       <Tabs.Screen
@@ -128,11 +118,6 @@ export default function TabLayout() {
             <TabBarIcon focused={focused} color={color} name={focused ? 'grid' : 'grid-outline'} label="Mais" />
           ),
         }}
-        listeners={({ navigation }) => ({
-            tabPress: (e) => {
-              e.preventDefault();
-            },
-        })}
       />
     </Tabs>
   );
@@ -164,9 +149,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: 50,
-    height: 60,
+    height: 75,
     borderRadius: 16,
-    paddingTop: 25
+    paddingTop: 30,
   },
   activeIconContainer: {
   },
