@@ -13,6 +13,9 @@ export default function RootLayout() {
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="screens-gui/MoodScreen" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)-GUI" options={{ headerShown: false }} />
+        <Stack.Screen name="screens-gui/Cicles/Cicles" options={{ headerShown: false }} />
+        <Stack.Screen name="screens-gui/Cicles/CreateCicle" options={{ headerShown: false }} />
+        <Stack.Screen name="screens-gui/Cicles/ChatCicle" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
       </Stack>
       <StatusBar style="auto" />

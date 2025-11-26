@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 export default function Header() {
+    const handleLogin = () => router.replace('/screens-gui/Cicles/Cicles');
   return (
     <View style={styles.container}>
       {/* Perfil e saudação */}
@@ -22,7 +24,7 @@ export default function Header() {
 
       {/* Botão de busca */}
       <TouchableOpacity style={styles.searchButton} activeOpacity={0.8}>
-        <Ionicons name="search" size={24} color="#fff" />
+        <Ionicons name="search" size={24} color="#fff" onPress={handleLogin}  />
       </TouchableOpacity>
     </View>
   );
