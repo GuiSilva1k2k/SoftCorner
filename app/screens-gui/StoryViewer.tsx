@@ -85,7 +85,7 @@ export default function StoryViewer() {
       setCurrentIndex(prev => prev + 1);
     } else {
       progressAnims[currentIndex].setValue(1);
-      router.back();
+      router.push("/(tabs)-GUI/Home");
     }
   };
 
@@ -125,7 +125,7 @@ export default function StoryViewer() {
     onPanResponderRelease: (evt, gestureState) => {
       handlePressOut();
 
-      if (Math.abs(gestureState.dx) < 10 && Math.abs(gestureState.dy) < 10) {
+      if (Math.abs(gestureState.dx) < 20 && Math.abs(gestureState.dy) < 20) {
         handleTap(evt);
       } 
       else if (Math.abs(gestureState.dx) > 50) {
@@ -183,7 +183,7 @@ export default function StoryViewer() {
   const currentStory = USER_STORIES[currentIndex] || USER_STORIES[0];
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} {...panResponder.panHandlers}>
       <StatusBar barStyle="light-content" />
       <Animated.View 
         style={[styles.storyContent, { transform: [{ translateX: slideAnim }] }]}
